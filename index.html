@@ -4,43 +4,111 @@
   <meta charset="UTF-8">
   <title>Raksha K C | Medical Electronics Portfolio</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
       color: #333;
     }
+
     header {
-      background-color: #0055aa;
+      background: linear-gradient(to right, #004e92, #000428);
       color: white;
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
-    section {
-      padding: 30px 40px;
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
     }
+
+    header p {
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 40px 60px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
     h2 {
-      color: #0055aa;
-      border-bottom: 2px solid #ddd;
+      color: #004e92;
+      margin-bottom: 20px;
+      font-size: 28px;
+      border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
     }
+
     ul {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
+
     ul li {
       margin-bottom: 10px;
     }
-    a {
+
+    .skills li::before {
+      content: "✔️ ";
       color: #007acc;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card a {
+      color: #0055aa;
+      font-weight: bold;
       text-decoration: none;
     }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
     footer {
-      background-color: #f1f1f1;
+      background: #eaeaea;
       text-align: center;
       padding: 20px;
       font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 30px 20px;
+      }
+
+      header h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
@@ -48,45 +116,62 @@
 
   <header>
     <h1>Raksha K C</h1>
-    <p>Medical Electronics Student | Digital and Therapeutic Equipments | Healthcare Innovation</p>
+    <p>Medical Electronics Student | Diagnostics | Circuit Design</p>
   </header>
 
   <section>
     <h2>About Me</h2>
-    <p>I'm a third-year Medical Electronics Engineering student at BMS College of Engineering. I’m passionate about using technology to build real-time systems that improve healthcare delivery and diagnostics. I have hands-on experience with embedded C, microcontrollers (LPC1768), and medical instrumentation like ECG, EMG, dialysis, and pacemakers.</p>
+    <p>
+      I’m a third-year Medical Electronics Engineering student at BMSCE. My strengths lie in understanding and working with diagnostic and therapeutic equipment such as ECG, EMG, BP monitors, defibrillators, dialysis systems, and pacemakers. I’m skilled in building and simulating circuits using Multisim and writing embedded programs in Keil µVision. I’m passionate about using electronics to improve patient care and healthcare technology.
+    </p>
   </section>
 
   <section>
     <h2>Skills</h2>
-    <ul>
-      <li>Embedded C Programming</li>
-      <li>Microcontroller – LPC1768</li>
-      <li>Real-Time Clock (RTC) Design</li>
-      <li>Biomedical Instrumentation: ECG, EMG, BP, Defibrillator, Pacemaker, Hemodialysis</li>
-      <li>Data Analysis using Excel (Biostatistics)</li>
-      <li>GitHub and Version Control</li>
+    <ul class="skills">
+      <li>Medical Instrumentation: ECG, EMG, BP, Defibrillators, Pacemakers, Dialysis</li>
+      <li>Keil µVision IDE (LPC1768, RTC, UART)</li>
+      <li>Multisim Circuit Design & Simulation</li>
+      <li>Healthcare Data Analysis (Excel, Biostatistics)</li>
+      <li>Virtual Lab Reporting (Human Body Systems)</li>
+      <li>Git & GitHub (Portfolio + Project Repositories)</li>
     </ul>
   </section>
 
   <section>
     <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/Raksha-k-c/RTC_Clock_LPC1768">🕒 RTC Clock using LPC1768</a> – Displays real-time via UART using embedded C.</li>
-      <li><a href="https://github.com/Raksha-k-c/Biostatistics_Dashboard">📊 Biostatistics Health Dashboard</a> – Interactive charts for healthcare data analysis in Excel.</li>
-      <li><a href="https://github.com/Raksha-k-c/HBS_Virtual_Lab_Reports">🔬 HBS Lab Reports</a> – Detailed individual lab reports on human body systems (PDF).</li>
-      <li><a href="https://github.com/Raksha-k-c/Smart_Helmet_Safety_Project">🪖 Smart Helmet Safety Project</a> – Concept to reduce road fatalities via motion sensing (Idea-stage).</li>
-    </ul>
+    <div class="projects">
+      <div class="card">
+        <a href="https://github.com/Raksha-k-c/RTC_Clock_LPC1768">🕒 RTC Clock - LPC1768</a>
+        <p>Displays real-time using Keil IDE and UART communication on LPC1768 microcontroller.</p>
+      </div>
+
+      <div class="card">
+        <a href="https://github.com/Raksha-k-c/Biostatistics_Dashboard">📊 Health Dashboard</a>
+        <p>Excel-based patient data charts and regression analysis for biostatistics lab project.</p>
+      </div>
+
+      <div class="card">
+        <a href="https://github.com/Raksha-k-c/HBS_Virtual_Lab_Reports">🔬 HBS Lab Reports</a>
+        <p>Virtual lab reports on Human Body Systems with individual experiment documentation.</p>
+      </div>
+
+      <div class="card">
+        <a href="https://github.com/Raksha-k-c/Smart_Helmet_Safety_Project">🪖 Smart Helmet Concept</a>
+        <p>Embedded system idea to detect accident scenarios using motion sensing (concept stage).</p>
+      </div>
+    </div>
   </section>
 
   <section>
     <h2>Contact</h2>
     <p>Email: <a href="mailto:raksha.chandru66@gmail.com">raksha.chandru66@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/raksha-chandrashekhar-29b719299">raksha-chandrashekhar</a></p>
-    <p>GitHub: <a href="https://github.com/Raksha-k-c">Raksha-k-c</a></p>
+    <p>GitHub: <a href="https://github.com/Raksha-k-c">github.com/Raksha-k-c</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Raksha K C | BMS College of Engineering | Built with 💙 GitHub Pages
+    &copy; 2025 Raksha K C | Portfolio | Built with 💙 GitHub Pages
   </footer>
 
 </body>
